@@ -4,7 +4,7 @@ function Item(props){
         <div className="item-box">
             <img className="item-image" src={'images/'+props.image}></img>
             <p>{props.name}</p>
-            <button className="add-cart-button">Add to Cart</button>
+            <button className="add-cart-button" onClick={props.addToCart.bind(this,props.name)} >Add to Cart</button>
         </div>
     );
 }

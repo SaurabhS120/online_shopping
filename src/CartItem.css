@@ -1,0 +1,21 @@
+.cart-item{
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    border-radius: 0px;
+}
+.cart-item *{
+    display: inline-block;
+}
+.cart-item-name{
+    width: 75%;
+}
+.cart-item-delete{
+    width: 20px;
+    height: 20px;
+    color: red;
+    text-align: center;
+    padding: 5px;
+    border-style: solid;
+    border-color: red;
+}

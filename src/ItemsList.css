@@ -2,3 +2,12 @@
     display: inline;
     text-align: center;
 }
+@media only screen and (min-width: 600px) {
+    .item-list{
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        right: 20%;
+    }
+}

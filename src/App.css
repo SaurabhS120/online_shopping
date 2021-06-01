@@ -1,11 +1,39 @@
 .Header{
   background-color: blue;
-  padding: 10px;
+  padding: 5%;
   box-shadow: 0px 5px 10px gray;
+  z-index: 5;
+}
+.Header *{
+  display: inline-block;
+  margin: 0px;
 }
 .Heading{  
   color: white;
   font-size: 24px;
-  margin: 0px;
   width: 75%;
+}
+.cart-toggle{
+  width: 20%;
+  text-align: right;
+}
+.cart-toggle-button{
+  padding: 10px;
+  border-radius: 10px;
+}
+@media only screen and (min-width: 600px) {
+  .cart-toggle{
+    display: none;
+  }
+  .cart-toggle{
+    display: none;
+  }
+  .Header{
+    padding: 10px;
+    display: block;
+    position: fixed;
+    top: 0px;
+    height: 40px;
+    width: 100%;
+  }
 }

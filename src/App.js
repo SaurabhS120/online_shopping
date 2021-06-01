@@ -17,13 +17,30 @@ class App extends React.Component {
     document.querySelector('.cart').classList.toggle('collapsed');
   }
   cartBody(){
-    return this.state.items.map((name,i)=><CartItem key={i} num={i} name={name} removeFromCart={this.removeFromCart.bind(this)} />);
+    return this.state.items.map((item,i)=><CartItem key={i} num={i} item={item} removeFromCart={this.removeFromCart.bind(this)} />);
   }
   renderCart(){
     ReactDOM.render(this.cartBody(),document.getElementById('cart-list'));
   }
+  isExist(x){
+    for(var i=0;i<this.state.items.length;i++){
+      if(this.state.items[i].name==x)return true;
+    }
+    return false;
+  }
+  increaseQuantity(x){
+    for(var i=0;i<this.state.items.length;i++){
+      if(this.state.items[i].name==x)this.state.items[i].quantity++;
+    }
+  }
   addToCart(item){
-    this.state.items.push(item);
+    if(this.isExist(item)){
+      this.increaseQuantity(item);
+    }
+    else{
+      var x={name:item,quantity:1};
+      this.state.items.push(x);
+    }
     this.renderCart();
   }
   removeFromCart(key){

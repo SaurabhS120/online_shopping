@@ -1,0 +1,13 @@
+.item-box{
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px gray;
+}
+.item-image{
+    height: 300px;
+    width: 300px;
+    background-color: gray;
+}
+.add-cart-button{
+    padding: 10px;
+}

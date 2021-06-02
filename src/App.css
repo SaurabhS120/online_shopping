@@ -20,11 +20,17 @@
 .cart-toggle-button{
   padding: 10px;
   border-radius: 10px;
+  border-style: solid;
+  border-color: cyan;
+  color: cyan;
 }
+
+.cart-toggle-button.collapsed{
+  border-color: white;
+  color: white;
+}
+
 @media only screen and (min-width: 600px) {
-  .cart-toggle{
-    display: none;
-  }
   .cart-toggle{
     display: none;
   }

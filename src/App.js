@@ -15,6 +15,7 @@ class App extends React.Component {
   }
   toggleCart(){
     document.querySelector('.cart').classList.toggle('collapsed');
+    document.querySelector('.cart-toggle-button').classList.toggle('collapsed');
   }
   cartBody(){
     return this.state.items.map((item,i)=><CartItem key={i} num={i} item={item} removeFromCart={this.removeFromCart.bind(this)} />);
@@ -53,7 +54,7 @@ class App extends React.Component {
         <div className="Header">
           <p className="Heading">Online Shopping</p>
           <div className="cart-toggle">
-            <button className="cart-toggle-button" onClick={this.toggleCart}>Cart</button>
+            <div className="cart-toggle-button collapsed" onClick={this.toggleCart}>Cart</div>
           </div>
         </div>
         <Cart/>

@@ -19,3 +19,7 @@
     border-style: solid;
     border-color: red;
 }
+.cart-item-quantity{
+    color: gray;
+    display: inline;
+}
